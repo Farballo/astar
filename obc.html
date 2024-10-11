@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astar - Proyecto Mephi</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <link rel="stylesheet" href="obc.css">
+</head>
+<body>
+
+    <!-- Header (no incluye navegaciones como pediste) -->
+    <header>
+        <div class="logos_header_right" id="logos_header_right" style="display: flex;">
+            <a href="fiubasat.html" class="social-icon">
+                <img src="img/logo.png" alt="logo astar" class="logo_astar">
+            </a>
+            <a href="fiubasat.html" class="social-icon">
+                <img src="img/mephi_logo.png" alt="logo mephi" class="logo_mephi">
+            </a>
+        </div>
+    
+        <div class="secciones">
+            <nav>
+                <ul>
+                    <li><a href="fiubasat.html">Inicio</a></li>
+                    <li><a href="fiubasat.html">Mephi</a></li>
+                    <li><a href="obc.html">OBC</a></li>
+                    <li><a href="unite.html">Unite</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="logos" id="logos-redes-header" style="display: flex;">
+            <a href="https://www.instagram.com/fiuba_aeroespacial/" class="social-icon">
+                <img src="img/Instagram_icon.png" alt="logo ig" class="logo_ig">
+            </a>
+            <a href="https://t.me/ASTAR_fiuba" class="social-icon">
+                <img src="img/Telegram_logo.png" alt="logo telegram" class="logo_telegram">
+            </a>
+            <a href="fiubasat.html">
+                <img src="img/fiuba-footer-logo.png" alt="Botón de Inicio" class="logo_fiuba">
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section (imagen principal a pantalla completa) -->
+    <section class="hero">
+        <img src="img/Designer_2.jpeg" alt="Imagen del Cubesat" class="hero-img">
+        <div class="hero-text">
+            <h1 class="fade-in">OBC</h1>
+            <h2 class="fade-in">On-Board Computer</h2>
+            <p class="fade-in">El proyecto contempla la investigación de distintas arquitecturas de microcontroladores
+                compatibles con el estándar CubeSat y con los requisitos específicos del proyecto junto a la
+                integración de bibliotecas de código abierto y el desarrollo de diversos protocolos de comunicación, esenciales para la interacción entre los distintos subsistemas del satélite, con un enfoque
+                en la fiabilidad y la eficiencia en condiciones de espacio.</p>
+        </div>
+    </section>
+
+    <!-- Hero Section (imagen principal a pantalla completa) -->
+    <section class="alcance">
+        <img src="img/tierra_hd.png" alt="Imagen del Cubesat" class="alcance-img">
+        <div class="alcance-text">
+            <h1 class="fade-in">Alcance</h1>
+            <h2 class="fade-in">Responsabilidades de la OBC</h2>
+        </div>
+
+        <!-- Ítems de alcance -->
+        <div class="alcance-items">
+            <div class="fade-in alcance-item left">
+                <img src="img/u-center.png" alt="Monitoreo" class="item-image">
+                <div class="item-text">
+                    <h1>Monitoreo de subsistemas</h1>
+                    <p>La OBC se encarga de monitorear continuamente todos los subsistemas del satélite, asegurando que funcionen correctamente y detectando cualquier anomalía o fallo para tomar las medidas correctivas necesarias.</p>
+                </div>
+            </div>
+            <div class="fade-in alcance-item left">
+                <img src="img/Design_communication.jpeg" alt="Comunicación" class="item-image">
+                <div class="item-text">
+                    <h1>Comunicación con estación terrestre</h1>
+                    <p>Tanto para envío de datos y telemetría como para recepción de comandos, la OBC posee tareas y una lógica programada que le permite una comunicación con la estación en tierra.</p>
+                </div>
+            </div>
+            <div class="fade-in alcance-item right">
+                <img src="img/panel_solar.jpg" alt="Gestión de energía" class="item-image">
+                <div class="item-text">
+                    <h1>Gestión de energía y carga útil</h1>
+                    <p>La OBC se encarga de la gestión eficiente de la energía del satélite, asegurando que todos los subsistemas reciban la energía necesaria para su funcionamiento. Además, controla y monitorea la carga útil, garantizando que los experimentos y equipos científicos a bordo operen correctamente.</p>
+                </div>
+            </div>
+            <div class="fade-in alcance-item right">
+                <img src="img/Design_actuadores.jpeg" alt="Control de actuadores" class="item-image">
+                <div class="item-text">
+                    <h1>Control de actuadores</h1>
+                    <p>En función de los distintos sensores a bordo del satélite y la comparación con valores de referencia, se generan valores sobre los actuadores del satélite para mantener el rumbo o posición del mismo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="diagrama">
+        <h1 class="fade-in diagrama_titulo">Diagrama de Desarrollo</h1>
+        <h2 class="fade-in diagrama_subtitulo">Se implementa un Pipeline de Integración Continua automatizado para asegurar la calidad del software mediante la compilación, pruebas y despliegue continuo</h2>
+        <div class="diagram-container">
+            <!-- Íconos e imágenes con flechas -->
+            <div class="icon fade-in">
+                <img src="img/C_logo.png" alt="Ícono 1" class="diagram-icon fade-in">
+                <p>Code</p>
+                <div class="popup">
+                    <p>Código realizado en C utilizando librerías open-source libopencm3 y FreeRTOS.</p>
+                </div>
+            </div>
+            <div class="arrow">
+                <p>Code pushed to Gitlab</p>
+                <img src="img/flecha_white.png" alt="Flecha">
+            </div>
+            <div class="icon fade-in">
+                <img src="img/Gitlab_logo.png" alt="Ícono 2" class="diagram-icon fade-in">
+                <p>Gitlab</p>
+                <div class="popup">
+                    <p>Activación de lógica de Gitlab CI para ejecución en automática del pipeline.</p>
+                </div>
+            </div>
+            <div class="arrow">
+                <p>Trigger Gitlab Runner</p>
+                <img src="img/flecha_white.png" alt="Flecha">
+            </div>
+            <div class="icon fade-in">
+                <img src="img/Docker_logo.png" alt="Ícono 3" class="diagram-icon fade-in">
+                <p>Docker Gitlab Runner</p>
+                <div class="popup">
+                    <p>Descarga de Docker con Gitlab runner con todo el entorno estándar para el funcionamiento del hardware seleccionado para el proyecto.</p>
+                </div>
+            </div>
+            <div class="arrow">
+                <p>Install Dependencies</p>
+                <img src="img/flecha_white.png" alt="Flecha">
+            </div>
+            <div class="icon fade-in">
+                <img src="img/Test_logo.png" alt="Ícono 4" class="diagram-icon fade-in">
+                <p>Build & Test</p>
+                <div class="popup">
+                    <p>Compilación, ejecución y análisis de tests con envío de resultados a través del Pipeline de Gitlab.</p>
+                </div>
+            </div>
+            <div class="arrow">
+                <p>Make flash & Test</p>
+                <img src="img/flecha_white.png" alt="Flecha">
+            </div>
+            <div class="icon fade-in">
+                <img src="img/Hardware_logo.png" alt="Ícono 5" class="diagram-icon fade-in">
+                <p>Flash Hardware</p>
+                <div class="popup">
+                    <p>El resultado es el hardware con el nuevo software instalado y corriendo, con el resultado de las pruebas devuelto a través del informe de Gitlab CI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="integrantes">
+        <h1>Integrantes</h1>
+        
+        <div class="subsection">
+            <h2>Desarrolladores</h2>
+            <div class="circles-container">
+                <div class="perfil">
+                    <div class="circle">
+                        <img src="img/Facu.png" alt="Desarrollador 1">
+                    </div>
+                    <h3>Facundo NoUSART Arballo</h3>
+                </div>
+                <div class="perfil">
+                    <div class="circle">
+                        <img src="img/Fausti.png" alt="Desarrollador 1">
+                    </div>
+                    <h3>Faustino TBJ Ferrari</h3>
+                </div>
+                <div class="perfil">
+                    <div class="circle">
+                        <img src="img/Fran.png" alt="Desarrollador 1">
+                    </div>
+                    <h3>Francisco MrDocker Spaltro</h3>
+                </div>
+            </div>
+        </div>
+    
+        <div class="subsection">
+            <h2>Directores</h2>
+            <div class="circles-container">
+                <div class="perfil">
+                    <div class="circle">
+                        <img src="img/Joaco.jpg" alt="Desarrollador 1">
+                    </div>
+                    <h3>Joaquin 0hs de sueño Ulloa</h3>
+                </div>
+                <div class="circle">
+                    <img src="img/director2.png" alt="Director 2">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección de Enlaces -->
+    <section class="enlaces_section">
+        <div class="enlaces_titulo">
+            <h1>Te invitamos a participar o conocer más</h1>
+        </div>
+        <div class="enlaces">
+            <div>
+                <a href="https://github.com/tu-perfil" target="_blank">
+                    <img src="img/Github_logo.png" alt="GitHub Logo" class="enlace">
+                </a>
+                <p>GitHub</p>
+            </div>
+            
+            <div>
+                <a href="https://drive.google.com/tu-carpeta" target="_blank">
+                    <img src="img/Gitlab_logo.png" alt="Gitlab Logo" class="enlace">
+                </a>
+                <p>Gitlab</p>
+            </div>
+            
+            <div>
+                <a href="ruta-al-archivo.pdf" target="_blank">
+                    <img src="img/logo_fiuba.png" alt="FIUBA Logo" class="enlace">
+                </a>
+                <p>Propuesta TPP</p>
+            </div>
+        </div>
+        
+        
+        
+    </section>
+
+    <!-- Footer (Genérico) -->
+    <footer>
+        <!-- Sección descriptiva -->
+        <section class="description">
+            <div class="content">
+                <h2 class="fade-in">Sobre Astar</h2>
+                <p class="fade-in">Astar es un cubesat diseñado para llevar a cabo investigaciones en el espacio exterior. Su carga útil, el Proyecto Mephi, está centrada en la recolección de datos astrobiológicos.</p>
+                <a href="#" class="btn-learn-more">Learn more</a> <!-- Botón agregado -->
+            </div>
+        </section>
+        <p>&copy; 2024 Astar. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="fiubasat.js"></script>
+
+    
+</body>
+</html>

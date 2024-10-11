@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astar - Proyecto Mephi</title>
+    <link rel="icon" type="image/x-icon" href="img/logo.ico">
+    <link rel="stylesheet" href="unite.css">
+</head>
+<body>
+
+    <!-- Header (no incluye navegaciones como pediste) -->
+    <header>
+        <div class="logos_header_right" id="logos_header_right" style="display: flex;">
+            <a href="fiubasat.html" class="social-icon">
+                <img src="img/logo.png" alt="logo astar" class="logo_astar">
+            </a>
+            <a href="fiubasat.html" class="social-icon">
+                <img src="img/mephi_logo.png" alt="logo mephi" class="logo_mephi">
+            </a>
+        </div>
+    
+        <div class="secciones">
+            <nav>
+                <ul>
+                    <li><a href="fiubasat.html">Inicio</a></li>
+                    <li><a href="fiubasat.html">Mephi</a></li>
+                    <li><a href="obc.html">OBC</a></li>
+                    <li><a href="fiubasat.html">Unite</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <div class="logos" id="logos-redes-header" style="display: flex;">
+            <a href="https://www.instagram.com/fiuba_aeroespacial/" class="social-icon">
+                <img src="img/Instagram_icon.png" alt="logo ig" class="logo_ig">
+            </a>
+            <a href="https://t.me/ASTAR_fiuba" class="social-icon">
+                <img src="img/Telegram_logo.png" alt="logo telegram" class="logo_telegram">
+            </a>
+            <a href="fiubasat.html">
+                <img src="img/fiuba-footer-logo.png" alt="Botón de Inicio" class="logo_fiuba">
+            </a>
+        </div>
+    </header>
+
+    <section class="forms-unite">
+        <h2>¡Unite a nuestro equipo!</h2>
+        <p>Si te interesa formar parte de nuestro proyecto, no dudes en contactarnos.</p>
+        <div class="forms">
+            <form action="https://formsubmit.co/b98ce6dee7a7a40ba154005442ecb5f9" method="POST">
+                <!--Nombre-->
+                <label class="form-label" for="i_nombre">Nombre:</label>
+                <input class="form-control" type="text" id="i_nombre" name="nombre" required>
+                <!--Correo Electrónico-->
+                <label class="form-label" for="i_correo">Correo electrónico:</label>
+                <input class="form-control" type="email" id="i_correo" name="correo" required>
+                <!--Mensaje-->
+                <label class="form-label" for="mensaje">Mensaje:</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+                <!--Asunto-->
+                <input type="hidden" name="_subject" value="Nuevo mensaje de contacto">
+                <!--Botón Enviar-->
+                <input class="btn btn-success" type="submit" value="ENVIAR">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer (Genérico) -->
+    <footer>
+        <!-- Sección descriptiva -->
+        <section class="description">
+            <div class="content">
+                <h2 class="fade-in">Sobre Astar</h2>
+                <p class="fade-in">Astar es un cubesat diseñado para llevar a cabo investigaciones en el espacio exterior. Su carga útil, el Proyecto Mephi, está centrada en la recolección de datos astrobiológicos.</p>
+                <a href="#" class="btn-learn-more">Learn more</a> <!-- Botón agregado -->
+            </div>
+        </section>
+        <p>&copy; 2024 Astar. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="fiubasat.js"></script>
+</body>

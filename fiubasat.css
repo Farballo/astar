@@ -1,0 +1,473 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #000;
+    line-height: 1.6;
+}
+
+/* Estilo del header */
+header {
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    padding: 5px 0; /* Espaciado superior e inferior */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Asegura que quede encima de otros elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: none; /* Sin sombra para header limpio */
+    transition: background-color .7s ease, box-shadow .7s ease; /* Transición suave */
+}
+
+/* Estilo del header cuando se agrega la clase 'scrolled' */
+header.scrolled {
+    background-color: rgba(33, 33, 33, 0.8); /* Fondo gris semitransparente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Pequeña sombra */
+    transition: background-color .7s ease, box-shadow .7s ease; /* Transición suave */
+}
+
+header nav ul {
+    list-style-type: none; /* Sin viñetas */
+    display: flex;
+    gap: 100px; /* Espaciado entre los elementos de la lista */
+}
+
+header nav ul li {
+    font-size: 20px;
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+header nav ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave al pasar sobre los enlaces */
+}
+
+header nav ul li a:hover {
+    color: #999; /* Color gris al pasar el mouse */
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.logos_header_right {
+    display: flex;
+    margin-left: 225px;
+    align-items: center; /* Para alinear los elementos verticalmente */
+}
+
+.logo_astar, .logo_mephi, .logo_fiuba, .logo_ig, .logo_telegram {
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    padding: 5px;
+}
+
+.logo_mephi, .logo_fiuba {
+    margin-left: 10px; /* Ajustar el espacio entre logos si es necesario */
+}
+
+.secciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Ajusta el espacio lateral entre los logos y las secciones */
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    margin-right: 75px;
+}
+
+.logo_ig, .logo_telegram {
+    margin-left: 15px; /* Aumentar la separación entre logos si es necesario */
+}
+
+
+/* Estilos responsivos era 768px*/
+@media (max-width: 1156px) {
+    header {
+        position: relative;
+        width: 95%;
+    }
+    
+    header.sticky {
+        position: relative;
+        top: 0;
+    }
+    
+    .logo_header {
+        order: 1;
+        margin-left: 0px;
+    }
+    
+    .logos {
+        order: 2;
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    .secciones {
+        display: none;
+        width: 100%;
+    }
+}
+
+/* Sección Hero */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(0%, -50%);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+
+/* Sección modules */
+.modules {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.modules-section {
+    background-image: url('img/fht6.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center; /* Posiciona la imagen en el centro */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 50px 0; /* Añade un poco de espacio alrededor del contenido */
+}
+
+.modules-text {
+    margin-top: 100px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Ajusta la dirección y el desenfoque de la sombra */
+    margin-bottom: 100px;
+}
+
+.modules-img {
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+    z-index: -1; /* Envía la imagen al fondo */
+}
+
+.modules-text h2 {
+    font-size: 3rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.modules-text p {
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+/* Animación para el desvanecimiento */
+@keyframes fade-in {
+    to {
+        opacity: 1; /* Hacer visible el texto */
+    }
+}
+
+.module {
+    max-height: 700px;
+    max-width: 450px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.image-container {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    padding: 5px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    animation: fadeIn 1s ease-in-out forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-background {
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    transition: transform .5s ease;
+}
+
+.module h1 {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical */
+    left: 30px; /* Ajusta la posición horizontal */
+    margin: 0;
+    font-size: 3rem;
+    z-index: 1000;
+    transition: transform .7s ease;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Ajusta la dirección y el desenfoque de la sombra */
+}
+
+.module-description {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: right 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.image-container:hover .module-description {
+    right: 0;
+}
+
+.image-container:hover .image-background {
+    transform: scale(1.05);
+}
+
+.module:hover h1{
+    transform: translateY(-150%);
+}
+
+.boton_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.boton_modules {
+    display: absolute;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.boton_modules:hover {
+    background-color: #218838;
+}
+
+/* Estilos responsivos */
+@media (max-width: 1156px) {
+    .carousel-indicators button {
+        display: none;
+    }
+
+    .modules {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .module {
+        width: 80%;
+        max-height: 510px;
+        max-width: 510px;
+    }
+
+    .image-container {
+        width: 100%;
+        max-height: 510px;
+        max-width: 510px;
+    }
+
+    .module h2 {
+        font-size: 1.25em;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sección Descriptiva */
+.description {
+    background-image: url('img/facultad_ingenieria_paseo_colon.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    color: white; /* Color del texto, ajusta según tu diseño */
+    text-align: center;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados opcional */
+}
+
+.description h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.description p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+/* Animaciones */
+.fade-in {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+/* Animación específica para el título h1, que inicia primero */
+.hero-text h1.fade-in {
+    transition-delay: 0s; /* Inicia inmediatamente */
+}
+
+/* Animación para el párrafo del hero, con un pequeño retraso */
+.hero-text p.fade-in {
+    transition-delay: 0.1s; /* Comienza 0.5 segundos después del h1 */
+}
+
+/* Animación para el bloque de la descripción */
+.description h2.fade-in, .description p.fade-in {
+    transition-delay: 0.1s; /* Comienza 1 segundo después del h1 */
+}
+
+/* Clase que se añade cuando el elemento está visible */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-learn-more {
+    position: relative; /* Posicionamiento relativo para el pseudo-elemento */
+    display: inline-block;
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    border: 2px solid white; /* Borde blanco */
+    margin-top: 20px;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 30px; /* Bordes redondeados */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 16px; /* Tamaño de la fuente */
+    text-decoration: none; /* Sin subrayado */
+    overflow: hidden; /* Evitar que el pseudo-elemento sobresalga */
+}
+
+.btn-learn-more::after {
+    content: ''; /* Necesario para el pseudo-elemento */
+    position: absolute; /* Posicionamiento absoluto dentro del botón */
+    top: 100%; /* Inicialmente fuera del botón */
+    left: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: white; /* Color de fondo al pasar el mouse */
+    transition: top 0.3s ease; /* Transición suave para el efecto */
+}
+
+.btn-learn-more:hover::after {
+    top: 0; /* Mover hacia arriba al pasar el mouse */
+    z-index: -1;
+}
+
+.btn-learn-more:hover {
+    color: #333; /* Texto oscuro al pasar el mouse */
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}

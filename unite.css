@@ -1,0 +1,251 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+    background-image: url('img/fondo_integrantes.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    line-height: 1.6;
+}
+
+/* Estilo del header */
+header {
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    padding: 5px 0; /* Espaciado superior e inferior */
+    justify-content: space-between; /* Espaciado entre los elementos */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Asegura que quede encima de otros elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: none; /* Sin sombra para header limpio */
+    transition: background-color .7s ease, box-shadow .7s ease; /* Transición suave */
+}
+
+/* Estilo del header cuando se agrega la clase 'scrolled' */
+header.scrolled {
+    background-color: rgba(33, 33, 33, 0.8); /* Fondo gris semitransparente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Pequeña sombra */
+    transition: background-color .7s ease, box-shadow .7s ease; /* Transición suave */
+}
+
+header nav ul {
+    list-style-type: none; /* Sin viñetas */
+    display: flex;
+    gap: 100px; /* Espaciado entre los elementos de la lista */
+}
+
+header nav ul li {
+    font-size: 20px;
+    letter-spacing: 1px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+header nav ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave al pasar sobre los enlaces */
+}
+
+header nav ul li a:hover {
+    color: #999; /* Color gris al pasar el mouse */
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+}
+
+.logos_header_right {
+    display: flex;
+    margin-left: 225px;
+    align-items: center; /* Para alinear los elementos verticalmente */
+}
+
+.logo_astar, .logo_mephi, .logo_fiuba, .logo_ig, .logo_telegram {
+    height: 50px;
+    width: auto;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    padding: 5px;
+}
+
+.logo_mephi, .logo_fiuba {
+    margin-left: 10px; /* Ajustar el espacio entre logos si es necesario */
+}
+
+/* Estilo form */
+.forms-unite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.form-title {
+    color: #333;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+footer h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #ddd;
+    align-self: flex-start;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+textarea.form-control {
+    height: 100px;
+    resize: vertical;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
+
+/* Sección Descriptiva */
+.description {
+    background-image: url('img/facultad_ingenieria_paseo_colon.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    color: white; /* Color del texto, ajusta según tu diseño */
+    text-align: center;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente negro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados opcional */
+}
+
+.description h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.description p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+/* Animaciones */
+.fade-in {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+/* Animación específica para el título h1, que inicia primero */
+.hero-text h1.fade-in {
+    transition-delay: 0s; /* Inicia inmediatamente */
+}
+
+/* Animación para el párrafo del hero, con un pequeño retraso */
+.hero-text p.fade-in {
+    transition-delay: 0.1s; /* Comienza 0.5 segundos después del h1 */
+}
+
+/* Animación para el bloque de la descripción */
+.description h2.fade-in, .description p.fade-in {
+    transition-delay: 0.1s; /* Comienza 1 segundo después del h1 */
+}
+
+/* Clase que se añade cuando el elemento está visible */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn-learn-more {
+    position: relative; /* Posicionamiento relativo para el pseudo-elemento */
+    display: inline-block;
+    background-color: transparent; /* Fondo transparente */
+    color: white; /* Texto blanco */
+    border: 2px solid white; /* Borde blanco */
+    margin-top: 20px;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 30px; /* Bordes redondeados */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 16px; /* Tamaño de la fuente */
+    text-decoration: none; /* Sin subrayado */
+    overflow: hidden; /* Evitar que el pseudo-elemento sobresalga */
+}
+
+.btn-learn-more::after {
+    content: ''; /* Necesario para el pseudo-elemento */
+    position: absolute; /* Posicionamiento absoluto dentro del botón */
+    top: 100%; /* Inicialmente fuera del botón */
+    left: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-color: white; /* Color de fondo al pasar el mouse */
+    transition: top 0.3s ease; /* Transición suave para el efecto */
+}
+
+.btn-learn-more:hover::after {
+    top: 0; /* Mover hacia arriba al pasar el mouse */
+    z-index: -1; /* Detrás del texto */
+}
+
+.btn-learn-more:hover {
+    color: #333; /* Texto oscuro al pasar el mouse */
+}
