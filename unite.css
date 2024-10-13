@@ -215,37 +215,41 @@ textarea.form-control {
     transform: translateY(0);
 }
 
-.btn-learn-more {
-    position: relative; /* Posicionamiento relativo para el pseudo-elemento */
+.button_slide {
+    color: #FFF;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 0px;
+    padding: 10px 20px;
     display: inline-block;
-    background-color: transparent; /* Fondo transparente */
-    color: white; /* Texto blanco */
-    border: 2px solid white; /* Borde blanco */
-    margin-top: 20px;
-    padding: 10px 20px; /* Espaciado interno */
-    border-radius: 30px; /* Bordes redondeados */
-    text-transform: uppercase; /* Texto en mayúsculas */
-    font-size: 16px; /* Tamaño de la fuente */
-    text-decoration: none; /* Sin subrayado */
-    overflow: hidden; /* Evitar que el pseudo-elemento sobresalga */
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0 0 #333;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
 }
 
-.btn-learn-more::after {
-    content: ''; /* Necesario para el pseudo-elemento */
-    position: absolute; /* Posicionamiento absoluto dentro del botón */
-    top: 100%; /* Inicialmente fuera del botón */
-    left: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Alto completo */
-    background-color: white; /* Color de fondo al pasar el mouse */
-    transition: top 0.3s ease; /* Transición suave para el efecto */
+.slide_down:hover {
+    box-shadow: inset 0 100px 0 0 #ffffff;
+    color: #000;
 }
 
-.btn-learn-more:hover::after {
-    top: 0; /* Mover hacia arriba al pasar el mouse */
-    z-index: -1; /* Detrás del texto */
+#outer {
+    width: 264px;
+    margin: 10px auto 0 auto;
+    text-align: center;
 }
 
-.btn-learn-more:hover {
-    color: #333; /* Texto oscuro al pasar el mouse */
+/* Footer */
+footer {
+    background-color: #000;
+    color: #777;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin: 10px 0;
 }
