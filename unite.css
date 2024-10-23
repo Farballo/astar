@@ -47,7 +47,7 @@ header nav ul {
 }
 
 header nav ul li {
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 1px; /* Espaciado entre letras */
     text-transform: uppercase; /* Texto en mayúsculas */
 }
@@ -71,10 +71,18 @@ header.sticky {
     display: flex;
     margin-left: 225px;
     align-items: center; /* Para alinear los elementos verticalmente */
+    gap: 20px
 }
 
-.logo_astar, .logo_mephi, .logo_fiuba, .logo_ig, .logo_telegram {
-    height: 50px;
+.logo_cubesat, .logo_github {
+    height: 75px;
+    width: auto;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2)); /* Sombra suave */
+    padding: 5px;   
+}
+
+.logo_ig, .logo_telegram {
+    height: 60px;
     width: auto;
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
     padding: 5px;
@@ -82,6 +90,25 @@ header.sticky {
 
 .logo_mephi, .logo_fiuba {
     margin-left: 10px; /* Ajustar el espacio entre logos si es necesario */
+}
+
+.secciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; /* Ajusta el espacio lateral entre los logos y las secciones */
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    margin-right: 75px;
+}
+
+.logo_ig, .logo_telegram {
+    margin-left: 15px; /* Aumentar la separación entre logos si es necesario */
 }
 
 /* Estilo form */
@@ -161,7 +188,7 @@ textarea.form-control {
 
 /* Sección Descriptiva */
 .description {
-    background-image: url('img/facultad_ingenieria_paseo_colon.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-image: url('img/tierra_hd_completo.png'); /* Reemplaza con la ruta de tu imagen */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen */
     color: white; /* Color del texto, ajusta según tu diseño */
@@ -182,7 +209,7 @@ textarea.form-control {
 
 .description p {
     font-size: 1.2rem;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     color: #ddd;
 }
